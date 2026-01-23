@@ -1,0 +1,29 @@
+{
+    "name": "Rust DevContainer with Trunk",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "vadimcn.vscode-lldb",
+                "fill-labs.dependi",
+                "usernamehw.errorlens",
+                "tamasfe.even-better-toml"
+            ],
+            "settings": {
+                "rust-analyzer.checkOnSave.command": "clippy",
+                "editor.formatOnSave": true,
+                "[rust]": {
+                    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+                }
+            }
+        }
+    },
+    "postCreateCommand": "rustc --version && cargo --version && trunk --version",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    }
+}
