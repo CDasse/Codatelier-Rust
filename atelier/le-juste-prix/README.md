@@ -144,7 +144,7 @@ let guess = get_input_from_user();
 
 La valeur saisie par l'utilisateur est une chaîne de caractères, or il nous faut une valeur numérique pour la comparaison. De plus, une saisie utilisateur peut avoir des espaces involontaires. On commence par « trimer » l'entrée utilisateur et ranger cette chaîne « trimée » dans une variable.
 
-> [!INFO]
+> [!TIP]
 > Le type `String` possède une méthode `trim`.
 
 <details>
